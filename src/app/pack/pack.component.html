@@ -1,0 +1,153 @@
+
+
+
+
+
+
+
+<body><h1>Choose your pack</h1></body>
+<button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">BronzePack</button>
+   
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Get your Pack</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')" >
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+   
+    <form  #addForm="ngForm"  (ngSubmit)="ajouterPack(addForm)">
+      <div class="form-group">
+        <label for="formGroupdate">date<span class="text-primary ml-1">*</span></label>
+        <input type="text" class="form-control" id="formGroupdate" placeholder="yyyy-mm-dd" name="date"  required="required" ngModel>
+        
+      </div>
+      <div class="form-group">
+        <label for="formGroupprice">price<span class="text-primary ml-1">*</span></label>
+        <input type="number" class="form-control" id="formGroupprice" placeholder="500" name="price" required="required"  ngModel>
+    
+      </div>
+      <div class="form-group">
+          <label   for="formGrouptype_pack"> type of the pack<span class="text-primary ml-1">*</span></label>
+          <input type="text"   class="form-control" id="formGrouptype_pack"  placeholder="Bronze" name="Type_Pack" required="required"  >
+          
+        </div>
+ 
+        <div class="form-group">
+          <label for="formGroupmail">mail<span class="text-primary ml-1">*</span></label>
+          <input type="text" class="form-control" id="formGroupmail" placeholder="email@email.com" name="mail" required="required" ngModel>
+          
+        </div>
+        
+          <div class="modal-footer">
+
+          <button type="submit" class="btn btn-primary" [disabled]="addForm.invalid" aria-label="Close" (click)="modal.dismiss('Cross click')" required [routerLink]="['/card-example']">Pay</button>
+</div>
+    </form>
+  
+
+  </div>
+ 
+</ng-template>
+
+
+<button class="btn btn-lg btn-outline-primary1" (click)="open(mymodal1)">SilverPack</button>
+   
+<ng-template #mymodal1 let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title" id="modal-basic-title">Get your Pack</h5>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-body">
+      <form  #addForm="ngForm" (ngSubmit)="ajouterPack(addForm)">
+        <div class="form-group">
+          <label for="formGroupprice">date<span class="text-primary ml-1">*</span></label>
+          <input type="text" class="form-control" id="formGroupprice" placeholder="yyyy-mm-dd" name="date"  required ngModel>
+        </div>
+        <div class="form-group">
+          <label for="formGroupdescription">price<span class="text-primary ml-1">*</span></label>
+          <input type="number" class="form-control" id="formGroupdescription" placeholder="1000" name="price" required ngModel>
+        </div>
+        <div class="form-group">
+            <label for="formGrouptitre"> type of the pack<span class="text-primary ml-1">*</span></label>
+            <input type="Type_pack" class="form-control" id="formGrouptitre" placeholder="Silver" name="TypePack" required ngModel>
+          </div>
+          <div class="form-group">
+            <label for="formGroupmail">mail<span class="text-primary ml-1">*</span></label>
+            <input type="text" class="form-control" id="formGroupmail" placeholder="email@email.com" name="mail" required ngModel>
+            
+          </div>
+          <div class="modal-footer">
+
+            <button type="submit" class="btn btn-primary"  aria-label="Close" (click)="modal.dismiss('Cross click')" [routerLink]="['/card-example']">Pay</button>
+  </div>
+      </form>
+      </div>
+  </div>
+  >
+</ng-template>
+
+
+<button class="btn btn-lg btn-outline-primary1" (click)="open(mymodal2)">goldPack</button>
+   
+<ng-template #mymodal2 let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title" id="modal-basic-title">Get your Pack</h5>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form  #addForm="ngForm"  (ngSubmit)="ajouterPack(addForm)">
+      <div class="form-group">
+        <label for="formGroupprice">date<span class="text-primary ml-1">*</span></label>
+        <input type="text" class="form-control" id="formGroupprice" placeholder="yyyy-mm-dd" name="date" ngModel  required>
+      </div>
+      <div class="form-group">
+        <label for="formGroupdescription">price<span class="text-primary ml-1">*</span></label>
+        <input type="number" class="form-control" id="formGroupdescription" placeholder="1000" name="price" required ngModel>
+      </div>
+      <div class="form-group">
+          <label for="formGrouptitre"> type of the pack<span class="text-primary ml-1">*</span></label>
+          <input type="Type_pack" class="form-control" id="formGrouptitre" placeholder="Silver" name="TypePack" required ngModel>
+        </div>
+        <div class="form-group">
+          <label for="formGroupmail">mail<span class="text-primary ml-1">*</span></label>
+          <input type="text" class="form-control" id="formGroupmail" placeholder="email@email.com" name="mail" required ngModel>
+          
+        </div>
+        
+        <div class="modal-footer">
+
+          <button type="submit" class="btn btn-primary"  aria-label="Close" (click)="modal.dismiss('Cross click')" [routerLink]="['/card-example']">Pay</button>
+</div>    </form>
+  </div>
+  
+</ng-template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div></div>

@@ -1,0 +1,111 @@
+<div class="container">
+    <div class="card m-3">
+      <div class="card-header">
+        <table class="table table-sm">
+          <thead>
+            <th>Test Card</th>
+            <th>Type</th>
+          </thead>
+          <tr>
+            <td>4242424242424242</td>
+            <td>Visa</td>
+          </tr>
+          <tr>
+            <td>5555555555554444</td>
+            <td>Mastercard</td>
+          </tr>
+          <tr>
+            <td>378282246310005</td>
+            <td>American Express</td>
+          </tr>
+          <tr>
+            <td>6011111111111117</td>
+            <td>Discover</td>
+          </tr>
+        </table>
+      </div>
+      <div class="card-body">
+        <div class="p-2 m-1" id="card-element">
+        </div>
+        <small style="display: block;" class="text-danger">
+          {{cardError}}
+        </small>
+      </div>
+      <button class="btn btn-primary" (click)="getToken()">Submit</button>
+    </div>
+    <div *ngIf="charge" class="alert alert-success">
+      <h5>Successfully Created Charge</h5>
+      <p>Charge Id: {{charge.id}}</p>
+    </div>
+    <div *ngIf="chargeError" class="alert alert-danger">
+      <h5>A Stripe Error Occurred</h5>
+      <p>{{chargeError.error}}</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-12">
+          <div style="text-align: center;margin-top:  50px;">
+           <div class="col-3" style="display: inline-block;cursor: pointer;margin-left: 10px ;">
+              <button type="submit " (click)="exportPdf()">downloadNow</button>
+
+          </div>
+          </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-12">
+            <div style="text-align: center;margin-top:  50px;">
+             <div class="col-3" style="display: inline-block;cursor: pointer;margin-left: 10px ;">
+                <button type="submit " (click)="dorappel(test)">Rappel</button>
+    
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+  </div>
+  </div>
+  <div class="container">
+    <div class="container">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+           
+        <table class="table table-striped custab">
+        <thead>
+            <div class="container">
+                <div class="row">
+                           <div id="custom-search-input">
+                                            
+                                                <input type="text" class="search-query form-control" placeholder="Search With Email Address"  name="mail" [(ngModel)]="mail"/>
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-danger" type="button" (click)="getpaack(mail)">search
+                                                        <span class=" glyphicon glyphicon-search"></span>
+                                                    </button>
+                                                </span>
+                                            
+                                        </div>
+                </div>
+                </div>
+            <tr>    
+                <th>id</th>
+                <th>date</th>
+                <th>price</th>
+                <th>type_pack</th>
+                <th>Mail</th>
+         
+            </tr>
+        </thead>
+        <tbody>
+            <tr >
+                <td>{{test.id_pack}}</td>
+                <td>{{test.date|date:'dd/MM/yyyy'}}</td>
+                <td>{{test.price}}</td>
+                <td>{{test.type_pack}}</td>
+                <td>{{test.mail}}</td>
+                <td class="text-center"><button class="btn btn-danger btn-xs"  (click)="deletepack(test.id_pack)" ><span class="glyphicon glyphicon-remove" ></span> Delete</button></td>
+              </tr>
+        </tbody>
+        </table>
+        </div>
+ 
