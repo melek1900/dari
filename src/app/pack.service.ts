@@ -39,5 +39,11 @@ private apiServerUrl=environment.apiBaseUrl;
   // getNombreCVAll(): Observable<any> {
   //   return this.http.get<any>(`${this.apiServerUrl}` + `/getAllNombreCV`);
   // }
- 
+  getNombreCVValide(): Observable<any> {
+    return this.http.get<any>(`${this.apiServerUrl}` + `/nombreCvValide`);
+  }
+
+  getNombreCVAll(): Observable<any> {
+    return this.http.get<any>(`${this.apiServerUrl}` + `getAllNombreCV`);
+  }
 }

@@ -17,7 +17,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DisplayPackComponent } from './display-pack/display-pack.component';
 import { AffichageComponent } from './affichage/affichage.component';
 import { ContentComponent } from './content/content.component';
-// import { StatistiqueComponent } from './statistique/statistique.component';
+ import { StatistiqueComponent } from './statistique/statistique.component';
 import { ChartsModule } from 'ng2-charts';
 import { UserComponent } from './user/user.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -30,7 +30,7 @@ const appRoutes : Routes= [
   {path: 'card-example',component: CardComponent},
  {path:"search",component:DisplayPackComponent},
  {path:"affichage",component:AffichageComponent},
-//  {path:"stat",component:StatistiqueComponent},
+ {path:"stat",component:StatistiqueComponent},
   {path:'user',component:UserComponent},
 ];
 
@@ -46,7 +46,7 @@ const appRoutes : Routes= [
     DisplayPackComponent,
     AffichageComponent,
     ContentComponent,
-    // StatistiqueComponent,
+     StatistiqueComponent,
     UserComponent,
     // MapComponent,
  ],
